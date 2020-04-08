@@ -55,7 +55,7 @@ test_reporting:
 
 test_support:
     extends: .tests
-    script: script: echo "hi"
+    script: echo "hi"
     only:
         - enable_cicd_pipeline
 
