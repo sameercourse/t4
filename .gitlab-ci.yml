@@ -1,0 +1,81 @@
+include:
+    # - template: DAST.gitlab-ci.yml
+    # - template: Dependency-Scanning.gitlab-ci.yml
+    # - template: SAST.gitlab-ci.yml
+
+stages:
+    - build
+    - test
+    - security
+    - staging
+    - production
+
+
+
+.tests:
+    stage: test
+    only:
+        - enable_cicd_pipeline
+
+test_transactions:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_common:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_api:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_investing:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_integrations:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_reporting:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_support:
+    extends: .tests
+    script: script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_financialplans:
+    extends: .tests
+    script: script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_signup:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+test_instant:
+    extends: .tests
+    script: echo "hi"
+    only:
+        - enable_cicd_pipeline
+
+
+
